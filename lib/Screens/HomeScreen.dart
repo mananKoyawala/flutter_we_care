@@ -6,15 +6,45 @@ import 'package:we_care/Screens/DoctorListScreen.dart';
 import 'package:we_care/Utils/Constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../Controller/LanguageController.dart';
+import '../Packages/Menu.dart';
 import '../Packages/SearchField.dart';
 import 'AppointmentsScreen.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
-
   final languageController = Get.find<LanguageController>();
 
+  String dropLang = 'English';
+
+  var languages = ['English', 'Gujarati', 'Hindi'];
+
+  HomeScreen({super.key});
+
+  Widget showDropDown(BuildContext context) {
+    return PopupMenuButton<String>(
+      onSelected: (String value) {
+        if (value == 'English') {
+          languageController.changeLocale1('en');
+        }
+        if (value == 'Gujarati') {
+          languageController.changeLocale1('gu');
+        }
+        if (value == 'Hindi') {
+          languageController.changeLocale1('hi');
+        }
+      },
+      itemBuilder: (BuildContext context) {
+        return languages.map((String item) {
+          return PopupMenuItem<String>(
+            value: item,
+            child: Text(item),
+          );
+        }).toList();
+      },
+    );
+  }
+
+  @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,14 +71,20 @@ class HomeScreen extends StatelessWidget {
                         textcolor: MyColor.textColor2,
                         fontWeight: FontWeight.bold,
                       ),
-                      IconButton(
-                          onPressed: () {
-                            languageController.changeLocale();
-                          },
-                          icon: const Icon(
-                            Icons.change_circle,
-                            size: 30,
-                          ))
+                      CustomPopupMenuButton(
+                        onSelected: (String value) {
+                          if (value == 'English') {
+                            languageController.changeLocale1('en');
+                          }
+                          if (value == 'Gujarati') {
+                            languageController.changeLocale1('gu');
+                          }
+                          if (value == 'Hindi') {
+                            languageController.changeLocale1('hi');
+                          }
+                        },
+                        items: languages,
+                      ),
                     ],
                   ),
                   const SizedBox(height: 16),

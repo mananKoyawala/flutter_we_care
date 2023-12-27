@@ -1,0 +1,14 @@
+{
+    "specializeDoctor" : "विशेषज्ञ चिकित्सक",
+    "ear" : "कान",
+    "stomach" : "पेट",
+    "kidney" : "किडनी",
+    "lungs" : "फेफड़े",
+    "bones" : "हड्डी",
+    "heart" : "दिल",
+    "searchText" : "यहां तलाश करो...",
+    "home" : "घर",
+    "appointments" : "नियुक्ति",
+    "profiles" : "प्रोफ़ाइल",
+    "edit" : "संपादन करना"
+ }
