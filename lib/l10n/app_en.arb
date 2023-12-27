@@ -1,0 +1,14 @@
+{
+    "specializeDoctor" : "Specialize Doctor",
+    "ear" : "Ear",
+    "stomach" : "Stomach",
+    "kidney" : "Kidney",
+    "lungs" : "Lungs",
+    "bones" : "Bones",
+    "heart" : "Heart",
+    "searchText" : "Search Here...",
+    "home" : "Home",
+    "appointments" : "Appointments",
+    "profiles" : "Profile",
+    "edit" : "Edit"
+ }

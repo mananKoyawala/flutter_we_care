@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:we_care/Packages/CustomePadding.dart';
 import 'package:we_care/Packages/RippleEffectContainer.dart';
 import 'package:we_care/Packages/ScrollColorRemove.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../Packages/CustomeTexts.dart';
 import '../Utils/Constants.dart';
@@ -32,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
                       textcolor: MyColor.white,
                     ),
                     TextFW700(
-                      text: "Profile",
+                      text: AppLocalizations.of(context)!.profiles,
                       fontSize: 22,
                       textcolor: MyColor.black,
                     ),
@@ -44,7 +45,7 @@ class ProfileScreen extends StatelessWidget {
                           width: 40,
                           alignment: Alignment.center,
                           child: TextFW400(
-                            text: "Edit",
+                            text: AppLocalizations.of(context)!.edit,
                             fontSize: 16,
                             textcolor: MyColor.themeColor,
                           ),

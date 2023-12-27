@@ -4,12 +4,16 @@ import 'package:we_care/Packages/CustomeTexts.dart';
 import 'package:we_care/Packages/RippleEffectContainer.dart';
 import 'package:we_care/Screens/DoctorListScreen.dart';
 import 'package:we_care/Utils/Constants.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../Controller/LanguageController.dart';
 import '../Packages/SearchField.dart';
 import 'AppointmentsScreen.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final languageController = Get.find<LanguageController>();
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +29,27 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 10),
-                  const SearchFeild(),
+                  SearchFeild(
+                      searchTitle: AppLocalizations.of(context)!.searchText),
                   const SizedBox(height: 25),
-                  TextFW500(
-                    text: "Specialize Doctor",
-                    fontSize: 18,
-                    textcolor: MyColor.textColor2,
-                    fontWeight: FontWeight.bold,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextFW500(
+                        text: AppLocalizations.of(context)!.specializeDoctor,
+                        fontSize: 18,
+                        textcolor: MyColor.textColor2,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            languageController.changeLocale();
+                          },
+                          icon: const Icon(
+                            Icons.change_circle,
+                            size: 30,
+                          ))
+                    ],
                   ),
                   const SizedBox(height: 16),
                   Row(
@@ -39,25 +57,25 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeComponent(
                           onTap: () {},
-                          title: "Ear",
+                          title: AppLocalizations.of(context)!.ear,
                           imgurl: "assets/icons/ear.png",
                           height: 40,
                         ),
                         HomeComponent(
                           onTap: () {},
-                          title: "Stomach",
+                          title: AppLocalizations.of(context)!.stomach,
                           imgurl: "assets/icons/stomach.png",
                           height: 40,
                         ),
                         HomeComponent(
                           onTap: () {},
-                          title: "Kidney",
+                          title: AppLocalizations.of(context)!.kidney,
                           imgurl: "assets/icons/kidney.png",
                           height: 40,
                         ),
                         HomeComponent(
                           onTap: () {},
-                          title: "Lungs",
+                          title: AppLocalizations.of(context)!.lungs,
                           imgurl: "assets/icons/lungs.png",
                           height: 40,
                         ),
@@ -67,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeComponent(
                           onTap: () {},
-                          title: "Bones",
+                          title: AppLocalizations.of(context)!.bones,
                           imgurl: "assets/icons/bones.png",
                           height: 40,
                         ),
@@ -78,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (_) => const DoctorListScreen()));
                           },
-                          title: "Heart",
+                          title: AppLocalizations.of(context)!.heart,
                           imgurl: "assets/icons/heart.png",
                           height: 35,
                         ),

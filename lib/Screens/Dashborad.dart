@@ -3,6 +3,7 @@ import 'package:we_care/Screens/AppointmentsScreen.dart';
 import 'package:we_care/Screens/HomeScreen.dart';
 import 'package:we_care/Screens/ProfileScreen.dart';
 import 'package:we_care/Utils/Constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -12,7 +13,7 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  List<Widget> pages = const [
+  List<Widget> pages = [
     HomeScreen(),
     AppointmentsScreen(),
     ProfileScreen(),
@@ -58,7 +59,7 @@ class _DashboardState extends State<Dashboard> {
                   Icons.home_outlined,
                   color: MyColor.textColor3,
                 ),
-                label: "Home"),
+                label: AppLocalizations.of(context)!.home),
             BottomNavigationBarItem(
                 activeIcon: Icon(
                   size: 24,
@@ -69,7 +70,7 @@ class _DashboardState extends State<Dashboard> {
                   Icons.date_range,
                   color: MyColor.textColor3,
                 ),
-                label: "Appointments"),
+                label: AppLocalizations.of(context)!.appointments),
             BottomNavigationBarItem(
                 activeIcon: Icon(
                   size: 24,
@@ -80,7 +81,7 @@ class _DashboardState extends State<Dashboard> {
                   Icons.person_outlined,
                   color: MyColor.textColor3,
                 ),
-                label: "Profile"),
+                label: AppLocalizations.of(context)!.profiles),
           ],
         ),
       ),
