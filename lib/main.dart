@@ -4,10 +4,13 @@ import 'package:we_care/Screens/SpalshScreen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
-
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'Controller/LanguageController.dart';
 
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  FlutterNativeSplash.remove();
   runApp(MyApp());
 }
 

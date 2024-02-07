@@ -25,6 +25,7 @@ dev_dependencies:
   flutter_localizations:
     sdk: flutter
   get: ^4.6.6
+  flutter_native_splash: ^2.3.10
 
 flutter_icons:
   android: true
