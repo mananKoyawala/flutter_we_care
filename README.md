@@ -57,7 +57,7 @@ Greatest advantage of develop this app is localization. This functionality is ar
           <p>8. Heart Surgeons Screen</p>
           <a target="_blank" rel="noopener noreferrer nofollow" href="https://i.ibb.co/jZw3y28/Screenshot-20240207-111114.jpg"><img src="https://i.ibb.co/jZw3y28/Screenshot-20240207-111114.jpg" alt="Heart Surgeons Screen" width="auto" height="500px" style="max-width: 100%;"></a>
       </td align="center">
-      <td>
+      <td align="center">
           <p>9. Doctor Details</p>
           <a target="_blank" rel="noopener noreferrer nofollow" href="https://i.ibb.co/JHcbVr4/Screenshot-20240207-111118.jpg"><img src="https://i.ibb.co/JHcbVr4/Screenshot-20240207-111118.jpg" alt="Doctor Details" width="auto" height="500px" style="max-width: 100%;"></a>
       </td>
