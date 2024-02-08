@@ -8,7 +8,7 @@ We care is app that contains only ui developed using flutter. It shows my capabi
 
 ## Localization
 
-Greatest advantage of develop this app is localization. This functionality is archeived by use of both flutter package flutter_localizations and shared_preferences.
+Greatest advantage of develop this app is localization. This functionality is archeived by use of both flutter package flutter_localizations and shared_preferences.<br>
 -> This app supports following languages of localizations :
 <br>1. English (default)
 <br>2. Gujarati
