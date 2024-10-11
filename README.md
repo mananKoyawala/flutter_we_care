@@ -69,4 +69,4 @@ Greatest advantage of develop this app is localization. This functionality is ar
 
 ## Download APK
 
-Here -> https://fastupload.io/sgQtaVF22k4QZA6/file
+Here -> [Download the app](./apk/we-care.apk)
